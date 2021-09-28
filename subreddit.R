@@ -96,6 +96,7 @@ bins <- unique(quantile(sorted, seq(0,1,length.out = 50)))
 vals <- cut(sorted, bins, labels=FALSE, include.lowest=TRUE)
 colorVals <- rev(heat.colors(length(bins)))[vals]
 barplot(sorted, las=2, name = names(sorted), cex.names = 0.7, col=colorVals )
+sorted
 
 bins <- unique(quantile(eigenCent, seq(0,1,length.out = 50)))
 vals <- cut(eigenCent, bins, labels=FALSE, include.lowest=TRUE)
